@@ -1,0 +1,235 @@
+body {
+  background-image: url("/images/white_bed_sheet.png");
+  margin-top: 50px;
+}
+.footer {
+  padding: 20px;
+  display: block;
+  margin-top: 100px;
+  text-align: center;
+  background-image: url("/images/solid.png");
+  box-shadow: 0px -5px 15px 0px #333;
+}
+.vcard label {
+  display: inline-block;
+  width: 80px;
+  color: #999;
+  font-weight: normal;
+}
+.vcard .note {
+  font-size: 80%;
+  margin-top: -10px;
+  color: #999;
+}
+hr.large {
+  border: none;
+  height: 8px;
+  background: #cacaca;
+  margin: 25px 0;
+}
+.workplaceskills {
+  margin-bottom: 30px;
+}
+.appengine {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=appengine.google.com");
+}
+.asterisk {
+  background-image: url("http://www.asterisk.org/sites/asterisk/themes/asterisk/favicon.ico");
+}
+.clojure {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.clojure.org");
+}
+.coffeescript {
+  background-image: url("http://coffeescript.org/documentation/images/favicon.ico");
+}
+.debian {
+  background-image: url("/images/favicons/debian.ico");
+}
+.django {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.djangoproject.com");
+}
+.drbd {
+  background-image: url("/images/favicons/drbd.ico");
+}
+.eclipse {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.eclipse.org");
+}
+.erlang {
+  background-image: url("/images/favicons/erlang.ico");
+}
+.facebook {
+  background-image: url("/images/favicons/facebook.ico");
+}
+.ganal {
+  background-image: url("http://www.google.com/analytics/images/favicon.ico");
+}
+.gentoo {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=gentoo.org");
+}
+.github {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=github.com");
+}
+.git {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=git-scm.com");
+}
+.glassfish {
+  background-image: url("/images/favicons/glassfish.ico");
+}
+.gnome {
+  background-image: url("/images/favicons/gnome.png");
+}
+.googleplus {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=plus.google.com");
+}
+.haskell {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=haskell.org");
+}
+.hudson {
+  background-image: url("/images/favicons/hudson.ico");
+}
+.java {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=java.com");
+}
+.jquery {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=jquery.com");
+}
+.jqueryui {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=jqueryui.com");
+}
+.json {
+  background-image: url("/images/favicons/json.gif");
+}
+.lighttpd {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=lighttpd.net");
+}
+.linkedin {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=linkedin.com");
+}
+.mediawiki {
+  background-image: url("/images/favicons/mediawiki.ico");
+}
+.mysql {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=mysql.com");
+}
+.nginx {
+  background-image: url("http://nginx.org/favicon.ico");
+}
+.node {
+  background-image: url("/images/favicons/node.ico");
+}
+.openssh {
+  background-image: url("/images/favicons/openssh.ico");
+}
+.opensuse {
+  background-image: url("/images/favicons/opensuse.ico");
+}
+.perl {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.perl.org");
+}
+.php {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.php.net");
+}
+.postgres {
+  background-image: url("http://www.postgresql.org/favicon.ico");
+}
+.python {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=python.org");
+}
+.qooxdoo {
+  background-image: url("/images/favicons/qooxdoo.png");
+}
+.racket {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.racket-lang.org");
+}
+.redis {
+  background-image: url("http://redis.io/images/favicon.png");
+}
+.ruby {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.ruby-lang.org");
+}
+.samba {
+  background-image: url("/images/favicons/samba.ico");
+}
+.sdl {
+  background-image: url("/images/favicons/sdl.ico");
+}
+.sharepoint {
+  background-image: url("/images/favicons/sharepoint.ico");
+}
+.skeleton {
+  background-image: url("/images/favicons/skeleton.ico");
+}
+.sqlalchemy {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.sqlalchemy.org");
+}
+.stackoverflow {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.stackoverflow.com");
+}
+.scons {
+  background-image: url("/images/favicons/scons.ico");
+}
+.swig {
+  background-image: url("/images/favicons/swig.ico");
+}
+.trac {
+  background-image: url("/images/favicons/trac.ico");
+}
+.ubuntu {
+  background-image: url("/images/favicons/ubuntu.ico");
+}
+.windows {
+  background-image: url("http://www.google.com/s2/u/0/favicons?domain=windows.microsoft.com");
+}
+.wordpress {
+  background-image: url("/images/favicons/wordpress.ico");
+}
+.zkoss {
+  background-image: url("/images/favicons/zkoss.ico");
+}
+.meonline .url {
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  margin-left: 0px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+.skills li {
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  margin-left: 0px;
+  line-height: 16px;
+}
+.skills li a {
+  cursor: pointer;
+}
+.skills li .descbox {
+  display: none;
+  font-size: 12px;
+}
+.skills li .descbox p {
+  margin-bottom: 2px;
+}
+.skills li[rating]:before {
+  font-family: monospace;
+  text-shadow: 1px 1px #999;
+}
+.skills li[rating="1"]:before {
+  color: #d83;
+  content: "■\00a0\00a0\00a0\00a0\00a0";
+}
+.skills li[rating="2"]:before {
+  color: #fd8;
+  content: "■■\00a0\00a0\00a0\00a0";
+}
+.skills li[rating="3"]:before {
+  color: #af5;
+  content: "■■■\00a0\00a0\00a0";
+}
+.skills li[rating="4"]:before {
+  color: #5d5;
+  content: "■■■■\00a0\00a0";
+}
+.skills li[rating="5"]:before {
+  color: #090;
+  content: "■■■■■\00a0";
+}

@@ -1,0 +1,650 @@
+var title=hi
+extends layout
+block head
+    script
+        $(document).ready(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top                        
+                    }, 300);
+                }
+                return true;
+            });
+            $('.skills li a').click(function() {
+                $('.descbox', $(this).parent()).toggle('fast');
+            });
+            var sel = "a[href^='http://'], a[href^='https://']";
+            $(sel).attr('target', '_blank');
+        });
+
+block content
+    a(href="https://github.com/bjourne/personalcv")
+        img(
+            style="position: absolute; top: 0; right: 0; border: 0;",
+            src="/images/forkme.png"
+            alt="Fork me on GitHub"
+        )            
+    .container
+        .four.columns.sidebar
+            nav
+                h3 Sections
+                ul
+                    li
+                        a(href="#about") About Me
+                    li
+                        a(href="#professional") Professional Experience
+                    li
+                        a(href="#personal") Personal Qualities
+                    li
+                        a(href="#skills") Expertise Areas
+                    li
+                        a(href="#workhist") Work History 
+                    li
+                        a(href="#pprojects") Personal Projects
+                    li
+                        a(href="#refs") References
+            hr
+            address.vcard
+                h4.fn Björn Lindqvist
+                ul
+                    li 
+                        label mail
+                        a.email(href = "mailto:bjourne@gmail.com") bjourne@gmail.com  
+                    li
+                        label web
+                        a.url(href = "http://www.bjornlindqvist.se") www.bjornlindqvist.se  
+                    li
+                        label tel
+                        span.tel +46&nbsp;(0)70&nbsp;597&nbsp;05&nbsp;41
+                    li.note Headhunters, 
+                        em
+                            u please mail
+                        |  instead of calling!
+                    li.adr
+                        label location
+                        span.locality Stockholm
+                        ,                          
+                        span.country-name Sweden
+                    li
+                        label status
+                        span Consulting                        
+                    li.meonline
+                        label me online
+                        a.url.googleplus(href = "https://plus.google.com/108345598141141979059/posts") google+
+                    li.meonline
+                        label 
+                        a.url.github(href = "https://github.com/bjourne") github
+                    li.meonline
+                        label
+                        a.url.linkedin(href = "http://www.linkedin.com/profile/view?id=158312279") Linkedin
+                    li.meonline
+                        label 
+                        a.url.stackoverflow(href = "http://stackoverflow.com/users/189247/bjorn-lindqvist") stack overflow
+            p Download old-fasioned PDF resume (
+                a(href="/files/BjörnLindqvist.pdf") Swedish
+                )
+  
+        .eleven.columns.offset-by-one.content
+            header
+                h1 Björn Lindqvist &mdash; consultant and developer
+            hr.large
+            p
+                | Professional resume site for Björn Lindqvist. For
+                | prospective employers and clients. Incorporated
+                | and looking for freelance work.
+            h3#about About Me
+            p
+                | Among my best qualities are my ability to see both
+                | the details and the full picture of any software
+                | development project. I'm passionate about always
+                | producing top quality results and satisfying my
+                | clients needs. Curious about almost everything,
+                | especially when it comes to software development
+                | techniques. My current focus area is building web
+                | sites and database design.
+            p
+                | Developing stuff is both what I do for fun and what
+                | I do for a living. I have studied for three years to
+                | Bachelor of Engineering and also contributed to some
+                | Open Source projects.
+                
+            h3#professional Professional Experience
+            p
+                | Worked for a year and half as a consultant for
+                | Network Expertise Sweden AB. Then as a consultant
+                | for Akademin AB, first on a project that lasted for
+                | ten months at Sony Ericsson in Lund and later twelve
+                | months as a system designer at Ericsson in
+                | Älvsjö. Then I was at Caliber Media AB for two years
+                | developing web platforms for hosting pay-to-play
+                | games. Currently working at Söderberg & Partners on
+                | their pension insurance management systems.
+            
+            h3#personal Personal Qualities
+            p
+            
+                | I'm a positive and happy person. Loves new challenges
+                | and takes great responsibility in my duties. I'm
+                | resilient to stress, reliable and will always do my
+                | best to reach my goals. People have told me that I'm
+                | a good tutor and I like to help my colleagues when I
+                | can. Favorite language is Python, favorite operating
+                | system is, naturally, Linux.
+            
+            h2#skills Expertise Areas
+            p
+                | My own valuations of my skill level in some of the
+                | expertise areas is presented below. One is newbie,
+                | three good and five master. Right now, Id like to
+                | learn more about Node.js and live-updating web
+                | sites. 
+            p
+                | Click on the underlined skill words to get some
+                | extra information about my experience with it.
+                
+            .row
+                .five.columns.alpha
+                    h3 Languages
+                    ul.skills
+                        li.bash(rating = 4) Bash
+                        li.basic(rating = 2) Basic
+                            ul.skills
+                                li.vbnet(rating = 3) Visual Basic .NET
+                        li.csharp(rating = 4) C#
+                        li.c(rating = 5) C
+                        li.cpp(rating = 3) C++
+                        li.erlang(rating = 3) Erlang
+                        li.haskell(rating = 3) Haskell
+                        li.java(rating = 5) Java
+                            ul.skills
+                                li.j2se(rating = 4) J2SE
+                                li.jee(rating = 2) Java EE
+                                li.jme(rating = 2) Java ME
+                        li.lisp(rating = 3) Lisp 
+                            ul.skills
+                                li.clojure(rating = 1) Clojure
+                                li.elisp(rating = 3) ELisp
+                                li.racket(rating = 1) Racket
+                        li.pascal(rating = 2) Pascal
+                        li.perl(rating = 1) Perl
+                        li.php(rating = 3) PHP
+                        li.powershell(rating = 3) Powershell
+                        li.python(rating = 5) Python
+                        li.ruby(rating = 2)
+                            a Ruby
+                            p.descbox
+                                a(href = "http://www.ruby-lang.org/") Ruby
+                                | , A language that appears very
+                                | nice. I'd like to learn more about
+                                | it and how it compares to Python. I
+                                | haven't had much chance to play with
+                                | it yet.
+                                
+                        li.sql(rating = 5) SQL
+                        li.x86asm(rating = 3) x86 Assembly
+                    h3 Databases &amp; Storages
+                    ul.skills
+                        li.memcached(rating = 4)
+                            a memcached
+                            p.descbox
+                                a(href="http://memcached.org/") memcached
+                                | , A must have for creating high
+                                | performance web sites.
+                        li.mnesia(rating = 1) Mnesia
+                        li.mysql(rating = 5) MySQL
+                        li.orm(rating = 5) ORM
+                            ul.skills
+                                li.entityfw(rating = 1)
+                                    a Entity Framework
+                                    p.descbox I like Linq2sql more.
+                                li.hibernate(rating = 1) Hibernate
+                                li.jpa(rating = 2) JPA
+                                li.linq2sql(rating = 3) Linq2sql
+                                li.sqlalchemy(rating = 4) SQLAlchemy
+                                li.sqlobject(rating = 3)
+                                    a SQLObject
+                                    p.descbox
+                                        a(href = "http://www.sqlobject.org/") SQLObject
+                                        | , A very old ORM for Python
+                                        | which was very popular until
+                                        | SQLAlchemy came along.
+                                li.toplink(rating = 3) TopLink
+                        li.postgres(rating = 5)
+                            a PostgreSQL
+                            p.descbox
+                                a(href = "http://www.postgresql.org/") PostgreSQL
+                                | , Words can not describe how awesome
+                                | this database is. It's miles ahead
+                                | of any other database I've worked
+                                | with and is so fast that you won't
+                                | ever need any NoSQL gunk.
+                            ul.skills
+                                li.plpgsql(rating = 3) PL/pgSQL
+                        li.rabbitmq(rating = 1) RabbitMQ                                
+                        li.redis(rating = 1) Redis
+                        li.sqlite(rating = 3) SQLite
+                        li.sqlserver(rating = 4) SQL Server
+                    h3 Linux Development
+                    ul.skills
+                        li.drbd(rating = 1) DRBD
+                        li.gnome(rating = 4) GNOME
+                        li.gobject(rating = 2) GObject
+                        li.gtk(rating = 4) GTK+ 2.0
+                        li.kde(rating = 2) KDE
+                        li.sdl(rating = 2) SDL
+                        li.openssh(rating = 3) OpenSSH
+                        li.samba(rating = 2) Samba
+                        li.swig(rating = 1) SWIG
+                        li.x11(rating = 1) X11
+                    h3 Protocols &amp; Specifications
+                    ul.skills
+                        li.can(rating = 1)
+                            a CAN bus
+                            p.descbox
+                                | In university, we created a simple robot using this
+                                | protocol. Since then, I've forgotten almost everything
+                                | about it.
+                        li.ip(rating = 3) IP-protocols
+                            ul.skills
+                                li.dns(rating = 3)
+                                    a DNS
+                                    p.descbox
+                                        | I know how to setup DNS
+                                        | records and how to use BIND.
+                                li.https(rating = 1) HTTPS
+                                li.icmp(rating = 1) ICMP
+                                li.imap(rating = 3) IMAP
+                                li.rtmp RTMP
+                                li.smtp(rating = 3) SMTP
+                                li.snmp SNMP
+                                li.spf(rating = 3) SPF
+                                li.tcp TCP
+                                li.udp(rating = 1) UDP
+                        li.mislife(rating = 4)
+                            a MisLife Insurance XML
+                            p.descbox
+                                a(href="http://mis.sfm.se/") MIS portal
+                                | , I'm responsible for the data bridge
+                                | between MisLife files and the Visi
+                                | insurance system at Söderberg &amp;
+                                | Partners.
+                        li.nfs(rating = 2) NFS
+                        li.voip(rating = 4) VoIP-protocols
+                            ul.skills
+                                li.h323 H.323
+                                li.iax IAX
+                                li.MGCP MGCP
+                                li.RTP RTP
+                                li.SIP(rating = 3) SIP
+                    h3 Other Skills
+                    ul.skills
+                        li.aff(rating = 1) Affiliate Marketing
+                        li.agile(rating = 2) Agile &amp; Scrum
+                        li.dp(rating = 3) Design Patterns
+                        li.fp(rating = 5) Functional Programming
+                        li.ganal(rating = 2) Google Analytics
+                        li.oop(rating = 4) Object-oriented Programming
+                        li.en(rating = 5) English
+                        li.de(rating = 2) German 
+                        li.guitar(rating = 1) Guitar
+                        li.swedish(rating = 5) Swedish
+                        li.unit(rating = 5) Unit Testing
+                .five.columns.offset-by-one.omega
+                    h3 Operating Systems
+                    ul.skills
+                        li.windows(rating = 3) Windows
+                        li.linux(rating = 5) Linux
+                            ul.skills
+                                li.debian(rating=1) Debian
+                                li.gentoo(rating=3)
+                                    a Gentoo
+                                    p.descbox
+                                        a(href="http://www.gentoo.org") Gentoo
+                                        | , I used to have a lot of
+                                        | fun compiling the latest
+                                        | updates of Gentoo and also
+                                        | reporting bugs and fixing
+                                        | broken ebuilds. But Ubuntu
+                                        | has a more polished feel to
+                                        | it which I've come to
+                                        | prefer.
+                                li.opensuse(rating=2) OpenSUSE
+                                li.redhat(rating=3) RedHat
+                                li.ubuntu(rating=5) Ubuntu
+                                
+                        li.ose(rating = 1) OSE
+                    h3 Web Technologies
+                    ul.skills                        
+                        li.ajax(rating = 4) AJAX
+                        li.coffeescript(rating = 2) CoffeeScript
+                        li.css(rating = 5) CSS
+                            ul.skills
+                                li.css3(rating = 2) CSS3
+                                li.skeleton(rating = 2) Skeleton
+                                li.responsive(rating = 1)
+                                    a Responsive Design
+                                    p.descbox
+                                        | This CV site is supposed to
+                                        | be responsive which means
+                                        | that it should look good on
+                                        | both a desktop computer and
+                                        | a handheld.
+                        li.dom(rating = 4) DOM
+                        li.html(rating = 5) HTML
+                            ul.skills
+                                li.html5(rating = 1) HTML5
+                        li.javascript(rating = 4) JavaScript
+                            ul.skills
+                                li.json(rating = 4) JSON
+                                li.jquery(rating = 4) jQuery
+                                li.jqueryui(rating = 2)
+                                    a jQueryUI
+                                    p.descbox
+                                        a(href="http://jqueryui.com/") jQuery UI
+                                        | , User Interface components
+                                        | built on top of jQuery. I've
+                                        | previously used it at
+                                        | Caliber Media for dialog
+                                        | boxes.
+                                li.qooxdoo(rating = 3) Qooxdoo
+                                li.qtip(rating = 2)
+                                    a qTip2
+                                    p.descbox
+                                        a(href="http://craigsworks.com/projects/qtip2/") qTip2
+                                        | , Tooltips built on top of
+                                        | jQuery. Used on my football
+                                        | site.
+                        li.markdown(rating = 3) Markdown                                
+                        li.rest(rating = 3) REST
+                        li.xml(rating = 4) XML
+                            ul.skills
+                                li.xpath(rating = 4) XPath
+                                li.xslt(rating = 3) XSLT
+                    h3 Web Frameworks &amp; API:s
+                    ul.skills
+                        li.asp(rating = 3) ASP.NET
+                        li.django(rating = 5) Django
+                            ul.skills
+                                li.celery(rating = 2) Celery
+                                li.jinja2(rating = 4) Jinja2
+                        li.facebook(rating = 1) Facebook API
+                        li.appengine(rating = 3) Google AppEngine
+                        li.googlemaps(rating = 3) Google Maps API
+                        li.glassfish(rating = 3) GlassFish
+                        li.jsp(rating = 4) JSP
+                        li.node(rating = 3) Node.js
+                            ul.skills
+                                li.express(rating = 1) Express
+                                li.jade(rating = 3) Jade
+                                li.npm(rating = 2) NPM
+                                li.socketio(rating = 1) Socket.IO
+                                li.stylus(rating = 3) Stylus
+                        li.rubyonrails(rating = 1) Ruby on Rails                        
+                        li.tomcat(rating = 1) Tomcat
+                        li.zkoss(rating = 2) ZKoss
+                        li.servers(rating = 2) Web Servers
+                            ul.skills
+                                li.apache(rating = 2) Apache
+                                li.lighttpd(rating = 3)
+                                    a lighttpd
+                                    .descbox
+                                        p
+                                            a(href = "http://www.lighttpd.net/") lighttpd
+                                            | , This was my favorite web server before I
+                                            | discovered nginx. These days the project
+                                            | seems almost abandoned.
+                                li.nginx(rating = 4) 
+                                    a nginx
+                                    .descbox
+                                        p
+                                            a(href = "http://nginx.org/") nginx
+                                            | , The best web server I've
+                                            | used.  Lightweight, easy to
+                                            | configure and small!
+                                        p I'm using it for all new websites I create.
+                                    
+                    h3 Developer Tools
+                    ul.skills
+                        li.ant(rating = 4) Ant
+                        li.asterisk(rating = 3) Asterisk
+                        li.autotools(rating = 3) Autotools
+                        li.bugtracking(rating = 5) Bug Tracking
+                            ul.skills
+                                li.bugzilla(rating = 4) Bugzilla
+                                li.dms(rating = 1) DMS
+                                li.jira(rating = 2) JIRA
+                                li.trac(rating = 5) Trac
+                        li.eclipse(rating = 3) Eclipse
+                        li.emacs(rating = 5) Emacs
+                        li.excel(rating = 4) Excel
+                        li.gatling(rating = 4) Gatling
+                        li.gcc(rating = 3) gcc
+                        li.jdts(rating = 2) JDTS
+                        li.junit(rating = 2) jUnit
+                        li.hudson(rating = 1) Hudson
+                        li.latex(rating = 3) LaTeX
+                        li.mediawiki(rating = 2) MediaWiki
+                        li.netbeans(rating = 4) NetBeans
+                        li.nosetest(rating = 3) nosetest
+                        li.outlook(rating = 2) Outlook
+                        li.scons(rating = 1) SCons
+                        li.sharepoint(rating = 1) Sharepoint
+                        li.versions(rating = 4) Version Control
+                            ul.skills
+                                li.clearcase(rating = 4) ClearCase
+                                li.cvs(rating = 3) CVS
+                                li.git(rating = 3) git                                    
+                                li.svn(rating = 5) Subversion
+                                li.tfs(rating = 4) Team Foundation Server        
+                        li.vi(rating = 2) Vi
+                        li.vstudio(rating = 4) Visual Studio
+                        li.wireshark(rating = 3) Wireshark
+                        li.wordpress(rating = 1) WordPress
+                        li.zsh(rating = 2) Zsh
+            h2#workhist Work History
+                h3
+                    a(href="http://www.soderbergpartners.se/") Söderberg &amp; Partners
+                    |,  Jan 2011 &mdash; curr.
+                p
+                    | Working with the back end system for Swedens
+                    | largest pension insurance advisor. A major part
+                    | of the work was handling the import of market
+                    | data from external sources to s&p:s database.
+                p
+                    | I have learnt a lot about optimizing SQL code
+                    | and have had a lot of fun applying advanced SQL
+                    | concepts such as window fuctions and common
+                    | table expressions.
+                .row.workplaceskills
+                    .two.columns.alpha
+                        strong Skills Applied
+                    .eight.columns.clearfix
+                        span
+                            | ASP.NET, C#, Linq2sql, MisLife, Outlook,
+                            | Powershell, SQL Server, Team Foundation
+                            | Server, Visi, Visual Basic .NET, Visual
+                            | Studio, XML
+                h3 Caliber Media AB, Dec 2008 &mdash; Dec 2010
+                p
+                    | Hired as a system developer for internet
+                    | marketing company Caliber Media AB. Responsible
+                    | for new development and maintenance of their
+                    | web-based gaming platforms. One part of the
+                    | company was gathering leads using our gaming
+                    | platforms, and the other was email marketing to
+                    | the gathered leads.
+                p
+                    | Sadly, this company seems to have tanked and
+                    | their site is not online anymore.
+                .row.workplaceskills
+                    .two.columns.alpha
+                        strong Skills Applied
+                    .eight.columns.omega
+                        | Agile, CSS, Facebook API, GlassFish, Hudson,
+                        | IMAP, Java, JSP, jQuery, MySQL, NetBeans,
+                        | Subversion, ZKoss
+                h3
+                    a(href="http://www.reab.se/") Akademin Stockholm AB
+                    | , 2006 &mdash; 2008
+                p
+                    | Consultant for Akademin Stockholm AB. Nowadays
+                    | they call themselves REAB Data AB.
+                    | During this time, I took my only certificate 
+                    em Sun Certified Java Programmer
+                    h4 Mobile Communications, Sony Ericsson, Lund
+                    p
+                        | Writing jUnit-tests for SE:s MIDP
+                        | implementation.
+                    h4 Integrated Site, Ericsson, Älvsjö
+                    p
+                        | Working on new features and maintenance of
+                        | Ericssons blade cluster solution for
+                        | telephony operators called Integrated
+                        | Site. It was the successor to AXE.
+                .row.workplaceskills
+                    .two.columns.alpha
+                        strong Skills Applied
+                    .eight.columns.omega
+                        | ClearCase, DRBD, Erlang, Gatling, Java
+                        | ME, jUnit, MIDP, OpenSUSE, UDP
+                            
+                h3
+                    a(href="http://www.networkexpertise.com/") Network Expertise Sweden AB
+                    |, Jul 2005 &mdash; 2006
+                p
+                    | NX was my first "real job" which I was hired to
+                    | straight out of university. I did a lot of
+                    | different things at nx.
+                h4 EyeNode
+                p
+                    | A video server called EyeNode written in
+                    | C and SDL for networked digital
+                    | surveillance cameras
+                h4 CV Management
+                p
+                    | A CV management system for the company's
+                    | sales people.
+                h4 MobiPhone
+                p
+                    | A VoIP PBX (MobiPhone) for small businesses built on
+                    | top of Asterisk.
+                h4 MeetingCamp
+                p
+                    | A VoIP conferencing system called MeetingCamp.
+                .row.workplaceskills
+                    .two.columns.alpha
+                        strong Skills Applied
+                    .eight.columns.omega
+                        span
+                            | Asterisk, C, Qooxdoo, Samba, SCons, SDL, VoIP
+                h3 Royal Institute of Technology in Södertälje, Aug 2003 &mdash; Jun 2005
+                p
+                    | Studied computer science and software
+                    | engineering, focused on real time software.
+                h2#pprojects Personal Projects
+                h3
+                    a(href="http://www.bjornlindqvist.se") My Virtual CV
+                p
+                
+                    | I suppose this CV should count as a personal
+                    | project, shouldn't it? ☺ It runs on my VPS hosted by 
+                    a(href="http://glesys.se/") GleSYS
+                    |  where I'm also running some other sites, for
+                    | fun. The web server I'm using is nginx, which
+                    | sends the request through to a node server this
+                    | one-page site written in Coffeescript. I've
+                    | gotten the good looking background patterns from 
+                    a(href = "http://subtlepatterns.com/") Subtle Patterns
+                    | .
+                    
+                p
+                    | The eye-candy, such as the tooltips and smooth
+                    | scrolling is implemented using jQuery.
+                p
+                    | Note that for this site, I've decided to go with
+                    | state-of-the-art web development techniques such
+                    | as CSS3 and HTML5 and not bother much with
+                    | supporting legacy browsers. The idea is that
+                    | whoever is reading this site, and is interested
+                    | in my services, is very likely to be using a
+                    | modern browser.
+                    
+                .row.workplaceskills
+                    .two.columns.alpha
+                        strong Skills Applied
+                    .eight.columns.clearfix
+                        span
+                            | CSS3, Express, Google Analytics, HTML5, Jade,
+                            | jQuery, jQueryUI, nginx, Node.js, Skeleton, Stylus
+
+                h3
+                    a(href="http://www.footballexperts.net") Football Experts
+                .row.clearfix
+                    .three.columns.alpha                    
+                        a(href="http://www.footballexperts.net")                    
+                            img(src="/images/footballexperts.png")
+                    .eight.columns.omega                    
+                        p
+                            | A site about football betting. Created
+                            | in collaboration with my brother to
+                            | explore affiliate marketing
+                            | opportunities in the sports betting
+                            | business.
+                        .row.workplaceskills
+                            .two.columns.alpha
+                                strong Skills Applied
+                            .six.columns.omega
+                                span
+                                    | Affiliate Marketing, Django,
+                                    | Jinja2, memcached, nginx, PostgreSQL,
+                                    | Python, qTip2
+                h3
+                    a(href="http://thevpslist.com/") The VPS List
+                p
+                    | A site about VPS:es. It's often down because I'm
+                    | being harassed by spammers. At the time I wrote
+                    | the site I didn't know how crucial it is to
+                    | implement strong anti-spam techniques on public
+                    | facing websites.
+                .row.workplaceskills
+                    .two.columns.alpha
+                        strong Skills Applied
+                    .eight.columns.omega
+                        span
+                            | Django, Google Maps API, memcached, PostgreSQL, Python
+                h3
+                    a(href="http://trac.bjourne.webfactional.com/") GtkImageView
+                .row.clearfix
+                    .three.columns.alpha
+                        a(href="http://trac.bjourne.webfactional.com/")
+                            img(src="/images/gtkimageview.png")
+                    .eight.columns.omega
+                        p
+                            | An image-viewer widget for GTK+ 2.0. GTK+ has
+                            | since released version 3.0 and revamped its
+                            | entire API, so the widget is only useful for
+                            | legacy applications. ☺
+                        .row.workplaceskills
+                            .two.columns.alpha
+                                strong Skills Applied
+                            .six.columns.omega
+                                span
+                                    | C, gobject, GTK+, Python, SWIG, trac
+
+                                                   
+                h2#refs References
+                p Available on request only.
+
+    .footer
+        h4
+            | &#169; 2012 Björn Lindqvist, 
+            a.email(href = "mailto:bjourne@gmail.com") bjourne@gmail.com      
+                    
+                  
+                          
+            
+
+                  
