@@ -4,12 +4,6 @@ os = require 'os'
 path = require 'path'
 stylus = require 'stylus'
 
-# In the production environment, asset files are served by nginx and
-# not node.
-host = os.hostname()
-basedir = if host == 'lindent' then '/var/www/personalcv' else __dirname
-pubdir = path.join(basedir, 'public')    
-
 app = express()
 app.configure ->
     app.set 'views', __dirname + '/views'
@@ -18,7 +12,11 @@ app.configure ->
     app.use(express.bodyParser())
     app.use(express.methodOverride())
     app.use(app.router)
+    # In the production environment, asset files are served by nginx
+    # and not node.
+    host = os.hostname()
     if host != 'lindent'
+        pubdir = path.join(__dirname, 'public')
         app.use(stylus.middleware(pubdir))
         app.use(express.static(pubdir))
 
