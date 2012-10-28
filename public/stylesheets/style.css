@@ -30,6 +30,9 @@ hr.large {
 .workplaceskills {
   margin-bottom: 30px;
 }
+.apache {
+  background-image: url("/images/favicons/apache.ico");
+}
 .appengine {
   background-image: url("http://www.google.com/s2/u/0/favicons?domain=appengine.google.com");
 }
@@ -53,6 +56,9 @@ hr.large {
 }
 .eclipse {
   background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.eclipse.org");
+}
+.emacs {
+  background-image: url("/images/favicons/emacs.ico");
 }
 .erlang {
   background-image: url("/images/favicons/erlang.ico");
@@ -105,11 +111,20 @@ hr.large {
 .linkedin {
   background-image: url("http://www.google.com/s2/u/0/favicons?domain=linkedin.com");
 }
+.linux {
+  background-image: url("/images/favicons/linux.ico");
+}
+.kde {
+  background-image: url("/images/favicons/kde.ico");
+}
 .mediawiki {
   background-image: url("/images/favicons/mediawiki.ico");
 }
 .mysql {
   background-image: url("http://www.google.com/s2/u/0/favicons?domain=mysql.com");
+}
+.netbeans {
+  background-image: url("/images/favicons/netbeans.ico");
 }
 .nginx {
   background-image: url("http://nginx.org/favicon.ico");
@@ -140,6 +155,9 @@ hr.large {
 }
 .racket {
   background-image: url("http://www.google.com/s2/u/0/favicons?domain=www.racket-lang.org");
+}
+.redhat {
+  background-image: url("/images/favicons/redhat.ico");
 }
 .redis {
   background-image: url("http://redis.io/images/favicon.png");
