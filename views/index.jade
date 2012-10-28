@@ -547,19 +547,22 @@ block content
                 h2#pprojects Personal Projects
                 h3
                     a(href="http://www.bjornlindqvist.se") My Virtual CV
-                p
-                
-                    | I suppose this CV should count as a personal
-                    | project, shouldn't it? ☺ It runs on my VPS hosted by 
-                    a(href="http://glesys.se/") GleSYS
-                    |  where I'm also running some other sites, for
-                    | fun. The web server I'm using is nginx, which
-                    | sends the request through to a node server this
-                    | one-page site written in Coffeescript. I've
-                    | gotten the good looking background patterns from 
-                    a(href = "http://subtlepatterns.com/") Subtle Patterns
-                    | .
-                    
+                .row
+                    .three.columns.alpha
+                        a(href="http://www.bjornlindqvist.se")
+                            img(src="/images/bjornlindqvist.png")                                        
+                    .eight.columns.omega
+                        p
+                            | I suppose this CV should count as a personal
+                            | project, shouldn't it? ☺ It runs on my VPS hosted by 
+                            a(href="http://glesys.se/") GleSYS
+                            |  where I'm also running some other sites, for
+                            | fun. The web server I'm using is nginx, which
+                            | sends the request through to a node server this
+                            | one-page site written in Coffeescript. I've
+                            | gotten the good looking background patterns from 
+                            a(href = "http://subtlepatterns.com/") Subtle Patterns
+                            | .
                 p
                     | The eye-candy, such as the tooltips and smooth
                     | scrolling is implemented using jQuery.
@@ -582,7 +585,7 @@ block content
 
                 h3
                     a(href="http://www.footballexperts.net") Football Experts
-                .row.clearfix
+                .row
                     .three.columns.alpha                    
                         a(href="http://www.footballexperts.net")                    
                             img(src="/images/footballexperts.png")
